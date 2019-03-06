@@ -14,7 +14,10 @@ export const fetchAction = () => dispatch => {
   axios
     .get("https://swapi.co/api/people")
     .then(res => dispatch({ type: SWAPI_SUCCESS, payload: res.data.results }))
-    .catch(err =>
-      dispatch({ type: SWAPI_FAILURE, payload: "Whoops, something went wrong" })
-    );
+    .catch(err => {
+      console.log("ERROR", err);
+      dispatch({
+        type: SWAPI_FAILURE
+      });
+    });
 };

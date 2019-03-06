@@ -24,7 +24,8 @@ export const charsReducer = (state = initialState, action) => {
     case SWAPI_FAILURE:
       return {
         ...state,
-        error: action.payload
+        fetching: false,
+        error: "Whoops, something went wrong"
       };
     default:
       return state;
