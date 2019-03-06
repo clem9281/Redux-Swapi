@@ -1,5 +1,6 @@
 import React from "react";
 
+// loading page from loading.io
 const LoadingPage = () => {
   return (
     <div className="fetch-container">
