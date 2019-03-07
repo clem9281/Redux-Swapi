@@ -3,3 +3,95 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+/* fetching animation */
+
+.fetch-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes lds-wedges {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes lds-wedges {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.lds-wedges {
+  position: relative;
+}
+.lds-wedges > div > div {
+  -webkit-transform-origin: 100px 100px;
+  transform-origin: 100px 100px;
+  -webkit-animation: lds-wedges 3.8s linear infinite;
+  animation: lds-wedges 3.8s linear infinite;
+  opacity: 0.8;
+}
+.lds-wedges > div > div > div {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 70px;
+  height: 70px;
+  border-radius: 70px 0 0 0;
+  -webkit-transform-origin: 100px 100px;
+  transform-origin: 100px 100px;
+}
+.lds-wedges > div div:nth-child(1) > div {
+  background: #f05125;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.lds-wedges > div div:nth-child(1) {
+  -webkit-animation-duration: 0.95s;
+  animation-duration: 0.95s;
+}
+.lds-wedges > div div:nth-child(2) > div {
+  background: #fdb813;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.lds-wedges > div div:nth-child(2) {
+  -webkit-animation-duration: 1.266666666666667s;
+  animation-duration: 1.266666666666667s;
+}
+.lds-wedges > div div:nth-child(3) > div {
+  background: #7fbb42;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.lds-wedges > div div:nth-child(3) {
+  -webkit-animation-duration: 1.9s;
+  animation-duration: 1.9s;
+}
+.lds-wedges > div div:nth-child(4) > div {
+  background: #32a0da;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.lds-wedges > div div:nth-child(4) {
+  -webkit-animation-duration: 3.8s;
+  animation-duration: 3.8s;
+}
+.lds-wedges {
+  width: 200px !important;
+  height: 200px !important;
+  -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+  transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+}
